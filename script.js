@@ -54,3 +54,7 @@
       };
       throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
     }
+
+      i = o[Symbol.iterator]();
+    return i.next.bind(i);
+  }
