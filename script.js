@@ -58,3 +58,7 @@
       i = o[Symbol.iterator]();
     return i.next.bind(i);
   }
+
+    function createCommonjsModule(fn, module) {
+  	return module = { exports: {} }, fn(module, module.exports), module.exports;
+  }
