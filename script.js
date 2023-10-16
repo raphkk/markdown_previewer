@@ -86,3 +86,7 @@
         xhtml: false
       };
     }
+
+     function changeDefaults(newDefaults) {
+      module.exports.defaults = newDefaults;
+    }
