@@ -90,3 +90,10 @@
      function changeDefaults(newDefaults) {
       module.exports.defaults = newDefaults;
     }
+
+     module.exports = {
+      defaults: getDefaults(),
+      getDefaults: getDefaults,
+      changeDefaults: changeDefaults
+    };
+  });
