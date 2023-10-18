@@ -97,3 +97,7 @@
       changeDefaults: changeDefaults
     };
   });
+
+  var defaults_1 = defaults.defaults;
+  var defaults_2 = defaults.getDefaults;
+  var defaults_3 = defaults.changeDefaults;
