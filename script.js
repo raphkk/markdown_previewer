@@ -116,3 +116,7 @@
     '"': '&quot;',
     "'": '&#39;'
   };
+
+   var getEscapeReplacement = function getEscapeReplacement(ch) {
+    return escapeReplacements[ch];
+  };
