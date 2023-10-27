@@ -201,3 +201,21 @@
 
     return href;
   }
+
+
+  var baseUrls = {};
+  var justDomain = /^[^:]+:\/*[^/]*$/;
+  var protocol = /^([^:]+:)[\s\S]*$/;
+  var domain = /^([^:]+:\/*[^/]*)[\s\S]*$/;
+
+  function resolveUrl(base, href) {
+    if (!baseUrls[' ' + base]) {
+      // we can ignore everything in base after the last slash of its path component,
+      // but we might need to add _that_
+      // https://tools.ietf.org/html/rfc3986#section-3
+      if (justDomain.test(base)) {
+        baseUrls[' ' + base] = base + '/';
+      } else {
+        baseUrls[' ' + base] = rtrim(base, '/', true);
+      }
+    }
