@@ -375,3 +375,33 @@
     findClosingBracket: findClosingBracket,
     checkSanitizeDeprecation: checkSanitizeDeprecation
   };
+
+
+  var defaults$1 = defaults.defaults;
+  var rtrim$1 = helpers.rtrim,
+      splitCells$1 = helpers.splitCells,
+      _escape = helpers.escape,
+      findClosingBracket$1 = helpers.findClosingBracket;
+
+  function outputLink(cap, link, raw) {
+    var href = link.href;
+    var title = link.title ? _escape(link.title) : null;
+
+    if (cap[0].charAt(0) !== '!') {
+      return {
+        type: 'link',
+        raw: raw,
+        href: href,
+        title: title,
+        text: cap[1]
+      };
+    } else {
+      return {
+        type: 'image',
+        raw: raw,
+        text: _escape(cap[1]),
+        href: href,
+        title: title
+      };
+    }
+  }
