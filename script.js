@@ -480,3 +480,30 @@
         };
       }
     };
+  _proto.fences = function fences(src) {
+      var cap = this.rules.block.fences.exec(src);
+
+      if (cap) {
+        var raw = cap[0];
+        var text = indentCodeCompensation(raw, cap[3] || '');
+        return {
+          type: 'code',
+          raw: raw,
+          lang: cap[2] ? cap[2].trim() : cap[2],
+          text: text
+        };
+      }
+    };
+
+    _proto.heading = function heading(src) {
+      var cap = this.rules.block.heading.exec(src);
+
+      if (cap) {
+        return {
+          type: 'heading',
+          raw: cap[0],
+          depth: cap[1].length,
+          text: cap[2]
+        };
+      }
+    };
