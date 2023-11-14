@@ -701,3 +701,31 @@
           align: cap[2].replace(/^ *|\| *$/g, '').split(/ *\| */),
           cells: cap[3] ? cap[3].replace(/\n$/, '').split('\n') : []
         };
+
+        if (item.header.length === item.align.length) {
+          item.raw = cap[0];
+          var l = item.align.length;
+          var i;
+
+          for (i = 0; i < l; i++) {
+            if (/^ *-+: *$/.test(item.align[i])) {
+              item.align[i] = 'right';
+            } else if (/^ *:-+: *$/.test(item.align[i])) {
+              item.align[i] = 'center';
+            } else if (/^ *:-+ *$/.test(item.align[i])) {
+              item.align[i] = 'left';
+            } else {
+              item.align[i] = null;
+            }
+          }
+
+          l = item.cells.length;
+
+          for (i = 0; i < l; i++) {
+            item.cells[i] = splitCells$1(item.cells[i].replace(/^ *\| *| *\| *$/g, ''), item.header.length);
+          }
+
+          return item;
+        }
+      }
+    };
