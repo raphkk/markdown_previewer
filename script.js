@@ -875,3 +875,15 @@
         return token;
       }
     };
+
+       _proto.strong = function strong(src) {
+      var cap = this.rules.inline.strong.exec(src);
+
+      if (cap) {
+        return {
+          type: 'strong',
+          raw: cap[0],
+          text: cap[4] || cap[3] || cap[2] || cap[1]
+        };
+      }
+    };
