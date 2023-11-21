@@ -887,3 +887,15 @@
         };
       }
     };
+
+       _proto.em = function em(src) {
+      var cap = this.rules.inline.em.exec(src);
+
+      if (cap) {
+        return {
+          type: 'em',
+          raw: cap[0],
+          text: cap[6] || cap[5] || cap[4] || cap[3] || cap[2] || cap[1]
+        };
+      }
+    };
