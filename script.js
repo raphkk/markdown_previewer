@@ -920,3 +920,13 @@
         };
       }
     };
+       _proto.br = function br(src) {
+      var cap = this.rules.inline.br.exec(src);
+
+      if (cap) {
+        return {
+          type: 'br',
+          raw: cap[0]
+        };
+      }
+    };
