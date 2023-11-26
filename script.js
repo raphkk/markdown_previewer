@@ -970,3 +970,30 @@
         };
       }
     };
+
+        _proto.url = function url(src, mangle) {
+      var cap;
+
+      if (cap = this.rules.inline.url.exec(src)) {
+        var text, href;
+
+        if (cap[2] === '@') {
+          text = _escape(this.options.mangle ? mangle(cap[0]) : cap[0]);
+          href = 'mailto:' + text;
+        } else {
+          // do extended autolink path validation
+          var prevCapZero;
+
+          do {
+            prevCapZero = cap[0];
+            cap[0] = this.rules.inline._backpedal.exec(cap[0])[0];
+          } while (prevCapZero !== cap[0]);
+
+          text = _escape(cap[0]);
+
+          if (cap[1] === 'www.') {
+            href = 'http://' + text;
+          } else {
+            href = text;
+          }
+        }
