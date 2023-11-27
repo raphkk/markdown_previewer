@@ -997,3 +997,26 @@
             href = text;
           }
         }
+
+        _proto.inlineText = function inlineText(src, inRawBlock, smartypants) {
+          var cap = this.rules.inline.text.exec(src);
+    
+          if (cap) {
+            var text;
+    
+            if (inRawBlock) {
+              text = this.options.sanitize ? this.options.sanitizer ? this.options.sanitizer(cap[0]) : _escape(cap[0]) : cap[0];
+            } else {
+              text = _escape(this.options.smartypants ? smartypants(cap[0]) : cap[0]);
+            }
+    
+            return {
+              type: 'text',
+              raw: cap[0],
+              text: text
+            };
+          }
+        };
+    
+        return Tokenizer;
+      }();
