@@ -1151,3 +1151,8 @@
   /**
    * Normal Inline Grammar
    */
+
+  inline.normal = merge$1({}, inline);
+  /**
+   * Pedantic Inline Grammar
+   */
