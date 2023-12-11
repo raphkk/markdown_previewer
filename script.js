@@ -1177,3 +1177,18 @@
   /**
    * GFM + Line Breaks Inline Grammar
    */
+  inline.breaks = merge$1({}, inline.gfm, {
+    br: edit$1(inline.br).replace('{2,}', '*').getRegex(),
+    text: edit$1(inline.gfm.text).replace('\\b_', '\\b_| {2,}\\n').replace(/\{2,\}/g, '*').getRegex()
+  });
+  var rules = {
+    block: block,
+    inline: inline
+  };
+
+  var defaults$2 = defaults.defaults;
+  var block$1 = rules.block,
+      inline$1 = rules.inline;
+  /**
+   * smartypants text replacement
+   */
