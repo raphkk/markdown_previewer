@@ -1227,3 +1227,16 @@
   /**
    * Block Lexer
    */
+
+  var Lexer_1 = /*#__PURE__*/function () {
+    function Lexer(options) {
+      this.tokens = [];
+      this.tokens.links = Object.create(null);
+      this.options = options || defaults$2;
+      this.options.tokenizer = this.options.tokenizer || new Tokenizer_1();
+      this.tokenizer = this.options.tokenizer;
+      this.tokenizer.options = this.options;
+      var rules = {
+        block: block$1.normal,
+        inline: inline$1.normal
+      };
