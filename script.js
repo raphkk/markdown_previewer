@@ -1326,3 +1326,9 @@
           tokens.push(token);
           continue;
         } // heading
+
+        if (token = this.tokenizer.heading(src)) {
+          src = src.substring(token.raw.length);
+          tokens.push(token);
+          continue;
+        } // table no leading pipe (gfm)
