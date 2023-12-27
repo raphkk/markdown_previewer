@@ -1332,3 +1332,8 @@
           tokens.push(token);
           continue;
         } // table no leading pipe (gfm)
+        if (token = this.tokenizer.nptable(src)) {
+          src = src.substring(token.raw.length);
+          tokens.push(token);
+          continue;
+        } // hr
