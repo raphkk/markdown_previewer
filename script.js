@@ -1321,6 +1321,7 @@
 
           continue;
         } // fences
+
         if (token = this.tokenizer.fences(src)) {
           src = src.substring(token.raw.length);
           tokens.push(token);
@@ -1332,8 +1333,15 @@
           tokens.push(token);
           continue;
         } // table no leading pipe (gfm)
+
         if (token = this.tokenizer.nptable(src)) {
           src = src.substring(token.raw.length);
           tokens.push(token);
           continue;
         } // hr
+
+        if (token = this.tokenizer.hr(src)) {
+          src = src.substring(token.raw.length);
+          tokens.push(token);
+          continue;
+        } // blockquote
