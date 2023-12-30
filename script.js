@@ -1345,3 +1345,10 @@
           tokens.push(token);
           continue;
         } // blockquote
+
+        if (token = this.tokenizer.blockquote(src)) {
+          src = src.substring(token.raw.length);
+          token.tokens = this.blockTokens(token.text, [], top);
+          tokens.push(token);
+          continue;
+        } // list
