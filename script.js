@@ -1364,3 +1364,9 @@
           tokens.push(token);
           continue;
         } // html
+
+        if (token = this.tokenizer.html(src)) {
+          src = src.substring(token.raw.length);
+          tokens.push(token);
+          continue;
+        } // def
