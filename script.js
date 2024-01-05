@@ -1390,3 +1390,9 @@
           tokens.push(token);
           continue;
         } // lheading
+
+        if (token = this.tokenizer.lheading(src)) {
+          src = src.substring(token.raw.length);
+          tokens.push(token);
+          continue;
+        } // top-level paragraph
