@@ -1396,3 +1396,9 @@
           tokens.push(token);
           continue;
         } // top-level paragraph
+
+        if (top && (token = this.tokenizer.paragraph(src))) {
+          src = src.substring(token.raw.length);
+          tokens.push(token);
+          continue;
+        } // text
