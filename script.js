@@ -1462,3 +1462,18 @@
                 token.tokens.header[j] = [];
                 this.inlineTokens(token.header[j], token.tokens.header[j]);
               } // cells
+
+              l2 = token.cells.length;
+
+              for (j = 0; j < l2; j++) {
+                row = token.cells[j];
+                token.tokens.cells[j] = [];
+
+                for (k = 0; k < row.length; k++) {
+                  token.tokens.cells[j][k] = [];
+                  this.inlineTokens(row[k], token.tokens.cells[j][k]);
+                }
+              }
+
+              break;
+            }
