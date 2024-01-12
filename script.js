@@ -1477,3 +1477,23 @@
 
               break;
             }
+
+            case 'list':
+              {
+                l2 = token.items.length;
+  
+                for (j = 0; j < l2; j++) {
+                  this.inline(token.items[j].tokens);
+                }
+  
+                break;
+              }
+          }
+        }
+  
+        return tokens;
+      }
+      /**
+       * Lexing/Compiling
+       */
+      ;
