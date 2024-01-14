@@ -1497,3 +1497,18 @@
        * Lexing/Compiling
        */
       ;
+
+      _proto.inlineTokens = function inlineTokens(src, tokens, inLink, inRawBlock) {
+        if (tokens === void 0) {
+          tokens = [];
+        }
+  
+        if (inLink === void 0) {
+          inLink = false;
+        }
+  
+        if (inRawBlock === void 0) {
+          inRawBlock = false;
+        }
+  
+        var token;
