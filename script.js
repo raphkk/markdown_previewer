@@ -1520,3 +1520,11 @@
             tokens.push(token);
             continue;
           } // tag
+
+          if (token = this.tokenizer.tag(src, inLink, inRawBlock)) {
+            src = src.substring(token.raw.length);
+            inLink = token.inLink;
+            inRawBlock = token.inRawBlock;
+            tokens.push(token);
+            continue;
+          } // link
