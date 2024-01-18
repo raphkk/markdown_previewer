@@ -1528,3 +1528,14 @@
             tokens.push(token);
             continue;
           } // link
+
+          if (token = this.tokenizer.link(src)) {
+            src = src.substring(token.raw.length);
+  
+            if (token.type === 'link') {
+              token.tokens = this.inlineTokens(token.text, [], true, inRawBlock);
+            }
+  
+            tokens.push(token);
+            continue;
+          } // reflink, nolink
