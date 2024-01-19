@@ -1539,3 +1539,14 @@
             tokens.push(token);
             continue;
           } // reflink, nolink
+
+          if (token = this.tokenizer.reflink(src, this.tokens.links)) {
+            src = src.substring(token.raw.length);
+  
+            if (token.type === 'link') {
+              token.tokens = this.inlineTokens(token.text, [], true, inRawBlock);
+            }
+  
+            tokens.push(token);
+            continue;
+          } // strong
