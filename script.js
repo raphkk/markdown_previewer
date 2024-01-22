@@ -1550,3 +1550,11 @@
             tokens.push(token);
             continue;
           } // strong
+
+
+        if (token = this.tokenizer.strong(src)) {
+          src = src.substring(token.raw.length);
+          token.tokens = this.inlineTokens(token.text, [], inLink, inRawBlock);
+          tokens.push(token);
+          continue;
+        } // em
