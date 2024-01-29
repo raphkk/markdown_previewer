@@ -1571,3 +1571,9 @@
           tokens.push(token);
           continue;
         } // br
+
+        if (token = this.tokenizer.br(src)) {
+          src = src.substring(token.raw.length);
+          tokens.push(token);
+          continue;
+        } // del (gfm)
