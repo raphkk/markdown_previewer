@@ -1577,3 +1577,10 @@
           tokens.push(token);
           continue;
         } // del (gfm)
+
+        if (token = this.tokenizer.del(src)) {
+          src = src.substring(token.raw.length);
+          token.tokens = this.inlineTokens(token.text, [], inLink, inRawBlock);
+          tokens.push(token);
+          continue;
+        } // autolink
