@@ -1590,3 +1590,10 @@
           tokens.push(token);
           continue;
         } // url (gfm)
+
+
+        if (!inLink && (token = this.tokenizer.url(src, mangle))) {
+          src = src.substring(token.raw.length);
+          tokens.push(token);
+          continue;
+        } // text
