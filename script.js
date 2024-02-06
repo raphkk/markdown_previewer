@@ -1613,3 +1613,16 @@
 
       return tokens;
     };
+
+        _createClass(Lexer, null, [{
+      key: "rules",
+      get: function get() {
+        return {
+          block: block$1,
+          inline: inline$1
+        };
+      }
+    }]);
+
+    return Lexer;
+  }();
