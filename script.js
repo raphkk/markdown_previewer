@@ -1633,3 +1633,10 @@
   /**
    * Renderer
    */
+
+  var Renderer_1 = /*#__PURE__*/function () {
+    function Renderer(options) {
+      this.options = options || defaults$3;
+    }
+
+    var _proto = Renderer.prototype;
