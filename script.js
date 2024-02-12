@@ -1663,3 +1663,7 @@
     _proto.blockquote = function blockquote(quote) {
       return '<blockquote>\n' + quote + '</blockquote>\n';
     };
+
+    _proto.html = function html(_html) {
+      return _html;
+    };
