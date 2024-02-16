@@ -1680,3 +1680,9 @@
     _proto.hr = function hr() {
       return this.options.xhtml ? '<hr/>\n' : '<hr>\n';
     };
+
+    _proto.list = function list(body, ordered, start) {
+      var type = ordered ? 'ol' : 'ul',
+          startatt = ordered && start !== 1 ? ' start="' + start + '"' : '';
+      return '<' + type + startatt + '>\n' + body + '</' + type + '>\n';
+    };
