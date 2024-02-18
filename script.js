@@ -1686,3 +1686,7 @@
           startatt = ordered && start !== 1 ? ' start="' + start + '"' : '';
       return '<' + type + startatt + '>\n' + body + '</' + type + '>\n';
     };
+
+    _proto.listitem = function listitem(text) {
+      return '<li>' + text + '</li>\n';
+    };
