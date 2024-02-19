@@ -1690,3 +1690,7 @@
     _proto.listitem = function listitem(text) {
       return '<li>' + text + '</li>\n';
     };
+
+    _proto.checkbox = function checkbox(checked) {
+      return '<input ' + (checked ? 'checked="" ' : '') + 'disabled="" type="checkbox"' + (this.options.xhtml ? ' /' : '') + '> ';
+    };
