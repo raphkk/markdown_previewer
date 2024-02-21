@@ -1698,3 +1698,8 @@
     _proto.paragraph = function paragraph(text) {
       return '<p>' + text + '</p>\n';
     };
+
+    _proto.table = function table(header, body) {
+      if (body) body = '<tbody>' + body + '</tbody>';
+      return '<table>\n' + '<thead>\n' + header + '</thead>\n' + body + '</table>\n';
+    };
