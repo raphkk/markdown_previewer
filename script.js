@@ -1703,3 +1703,7 @@
       if (body) body = '<tbody>' + body + '</tbody>';
       return '<table>\n' + '<thead>\n' + header + '</thead>\n' + body + '</table>\n';
     };
+
+    _proto.tablerow = function tablerow(content) {
+      return '<tr>\n' + content + '</tr>\n';
+    };
