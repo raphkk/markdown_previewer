@@ -1707,3 +1707,10 @@
     _proto.tablerow = function tablerow(content) {
       return '<tr>\n' + content + '</tr>\n';
     };
+
+    _proto.tablecell = function tablecell(content, flags) {
+      var type = flags.header ? 'th' : 'td';
+      var tag = flags.align ? '<' + type + ' align="' + flags.align + '">' : '<' + type + '>';
+      return tag + content + '</' + type + '>\n';
+    } // span level renderer
+    ;
