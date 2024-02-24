@@ -1714,3 +1714,7 @@
       return tag + content + '</' + type + '>\n';
     } // span level renderer
     ;
+
+    _proto.strong = function strong(text) {
+      return '<strong>' + text + '</strong>';
+    };
