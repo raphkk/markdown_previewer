@@ -1718,3 +1718,7 @@
     _proto.strong = function strong(text) {
       return '<strong>' + text + '</strong>';
     };
+
+    _proto.em = function em(text) {
+      return '<em>' + text + '</em>';
+    };
