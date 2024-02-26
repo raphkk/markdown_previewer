@@ -1722,3 +1722,7 @@
     _proto.em = function em(text) {
       return '<em>' + text + '</em>';
     };
+
+    _proto.codespan = function codespan(text) {
+      return '<code>' + text + '</code>';
+    };
