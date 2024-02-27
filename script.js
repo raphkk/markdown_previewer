@@ -1726,3 +1726,7 @@
     _proto.codespan = function codespan(text) {
       return '<code>' + text + '</code>';
     };
+
+    _proto.br = function br() {
+      return this.options.xhtml ? '<br/>' : '<br>';
+    };
