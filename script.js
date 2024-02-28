@@ -1730,3 +1730,7 @@
     _proto.br = function br() {
       return this.options.xhtml ? '<br/>' : '<br>';
     };
+
+    _proto.del = function del(text) {
+      return '<del>' + text + '</del>';
+    };
