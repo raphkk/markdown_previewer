@@ -1758,7 +1758,7 @@
       if (href === null) {
         return text;
       }
-      
+
       var out = '<img src="' + href + '" alt="' + text + '"';
 
       if (title) {
@@ -1768,3 +1768,10 @@
       out += this.options.xhtml ? '/>' : '>';
       return out;
     };
+
+    _proto.text = function text(_text) {
+      return _text;
+    };
+
+    return Renderer;
+  }();
