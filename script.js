@@ -1775,3 +1775,17 @@
 
     return Renderer;
   }();
+
+    /**
+   * TextRenderer
+   * returns only the textual part of the token
+   */
+    var TextRenderer_1 = /*#__PURE__*/function () {
+      function TextRenderer() {}
+  
+      var _proto = TextRenderer.prototype;
+  
+      // no need for block level renderers
+      _proto.strong = function strong(text) {
+        return text;
+      };
