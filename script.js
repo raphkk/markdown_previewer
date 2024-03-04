@@ -1789,3 +1789,7 @@
       _proto.strong = function strong(text) {
         return text;
       };
+
+      _proto.em = function em(text) {
+        return text;
+      };
