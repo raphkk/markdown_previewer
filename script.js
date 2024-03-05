@@ -1793,3 +1793,8 @@
       _proto.em = function em(text) {
         return text;
       };
+
+
+    _proto.codespan = function codespan(text) {
+      return text;
+    };
