@@ -1798,3 +1798,7 @@
     _proto.codespan = function codespan(text) {
       return text;
     };
+
+    _proto.del = function del(text) {
+      return text;
+    };
