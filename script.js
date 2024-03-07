@@ -1802,3 +1802,7 @@
     _proto.del = function del(text) {
       return text;
     };
+
+    _proto.html = function html(text) {
+      return text;
+    };
