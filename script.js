@@ -1806,3 +1806,7 @@
     _proto.html = function html(text) {
       return text;
     };
+
+    _proto.text = function text(_text) {
+      return _text;
+    };
