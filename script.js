@@ -1810,3 +1810,7 @@
     _proto.text = function text(_text) {
       return _text;
     };
+
+    _proto.link = function link(href, title, text) {
+      return '' + text;
+    };
