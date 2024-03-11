@@ -1814,3 +1814,7 @@
     _proto.link = function link(href, title, text) {
       return '' + text;
     };
+
+    _proto.image = function image(href, title, text) {
+      return '' + text;
+    };
