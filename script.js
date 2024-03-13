@@ -1825,3 +1825,14 @@
 
     return TextRenderer;
   }();
+
+    /**
+   * Slugger generates header id
+   */
+    var Slugger_1 = /*#__PURE__*/function () {
+      function Slugger() {
+        this.seen = {};
+      }
+      /**
+       * Convert string to unique id
+       */
