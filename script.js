@@ -1817,4 +1817,11 @@
 
     _proto.image = function image(href, title, text) {
       return '' + text;
+    }; 
+
+    _proto.br = function br() {
+      return '';
     };
+
+    return TextRenderer;
+  }();
