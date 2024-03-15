@@ -1836,3 +1836,26 @@
       /**
        * Convert string to unique id
        */
+
+      var _proto = Slugger.prototype;
+
+      _proto.slug = function slug(value) {
+        var slug = value.toLowerCase().trim() // remove html tags
+        .replace(/<[!\/a-z].*?>/ig, '') // remove unwanted chars
+        .replace(/[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, '').replace(/\s/g, '-');
+  
+        if (this.seen.hasOwnProperty(slug)) {
+          var originalSlug = slug;
+  
+          do {
+            this.seen[originalSlug]++;
+            slug = originalSlug + '-' + this.seen[originalSlug];
+          } while (this.seen.hasOwnProperty(slug));
+        }
+  
+        this.seen[slug] = 0;
+        return slug;
+      };
+  
+      return Slugger;
+    }();
