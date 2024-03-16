@@ -1859,3 +1859,9 @@
   
       return Slugger;
     }();
+
+  var defaults$4 = defaults.defaults;
+  var unescape$1 = helpers.unescape;
+  /**
+   * Parsing & Compiling
+   */
