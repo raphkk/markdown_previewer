@@ -1878,3 +1878,13 @@
     /**
      * Static Parse Method
      */
+
+
+    Parser.parse = function parse(tokens, options) {
+      var parser = new Parser(options);
+      return parser.parse(tokens);
+    }
+    /**
+     * Parse Loop
+     */
+    ;
