@@ -1888,3 +1888,10 @@
      * Parse Loop
      */
     ;
+
+    var _proto = Parser.prototype;
+
+    _proto.parse = function parse(tokens, top) {
+      if (top === void 0) {
+        top = true;
+      }
