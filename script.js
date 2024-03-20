@@ -1895,3 +1895,24 @@
       if (top === void 0) {
         top = true;
       }
+
+      var out = '',
+      i,
+      j,
+      k,
+      l2,
+      l3,
+      row,
+      cell,
+      header,
+      body,
+      token,
+      ordered,
+      start,
+      loose,
+      itemBody,
+      item,
+      checked,
+      task,
+      checkbox;
+  var l = tokens.length;
