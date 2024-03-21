@@ -1916,3 +1916,18 @@
       task,
       checkbox;
   var l = tokens.length;
+
+  for (i = 0; i < l; i++) {
+    token = tokens[i];
+
+    switch (token.type) {
+      case 'space':
+        {
+          continue;
+        }
+
+      case 'hr':
+        {
+          out += this.renderer.hr();
+          continue;
+        }
