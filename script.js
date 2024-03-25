@@ -1931,3 +1931,8 @@
           out += this.renderer.hr();
           continue;
         }
+          case 'heading':
+            {
+              out += this.renderer.heading(this.parseInline(token.tokens), token.depth, unescape$1(this.parseInline(token.tokens, this.textRenderer)), this.slugger);
+              continue;
+            }
