@@ -1941,3 +1941,16 @@
               out += this.renderer.code(token.text, token.lang, token.escaped);
               continue;
             }
+                      case 'table':
+            {
+              header = ''; // header
+
+              cell = '';
+              l2 = token.header.length;
+
+              for (j = 0; j < l2; j++) {
+                cell += this.renderer.tablecell(this.parseInline(token.tokens.header[j]), {
+                  header: true,
+                  align: token.align[j]
+                });
+              }
