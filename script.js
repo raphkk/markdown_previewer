@@ -1954,3 +1954,26 @@
                   align: token.align[j]
                 });
               }
+
+                            header += this.renderer.tablerow(cell);
+              body = '';
+              l2 = token.cells.length;
+
+              for (j = 0; j < l2; j++) {
+                row = token.tokens.cells[j];
+                cell = '';
+                l3 = row.length;
+
+                for (k = 0; k < l3; k++) {
+                  cell += this.renderer.tablecell(this.parseInline(row[k]), {
+                    header: false,
+                    align: token.align[k]
+                  });
+                }
+
+                body += this.renderer.tablerow(cell);
+              }
+
+              out += this.renderer.table(header, body);
+              continue;
+            }
