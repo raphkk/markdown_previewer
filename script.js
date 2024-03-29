@@ -1977,3 +1977,9 @@
               out += this.renderer.table(header, body);
               continue;
             }
+                case 'blockquote':
+            {
+              body = this.parse(token.tokens);
+              out += this.renderer.blockquote(body);
+              continue;
+            }
