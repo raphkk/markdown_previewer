@@ -2025,3 +2025,10 @@
               out += this.renderer.list(body, ordered, start);
               continue;
             }
+
+          case 'html':
+            {
+              // TODO parse inline content if parameter markdown=1
+              out += this.renderer.html(token.text);
+              continue;
+            }
