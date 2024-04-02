@@ -2032,3 +2032,8 @@
               out += this.renderer.html(token.text);
               continue;
             }
+          case 'paragraph':
+            {
+              out += this.renderer.paragraph(this.parseInline(token.tokens));
+              continue;
+            }
