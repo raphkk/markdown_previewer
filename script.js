@@ -2070,3 +2070,10 @@
      * Parse Inline Tokens
      */
     ;
+
+    _proto.parseInline = function parseInline(tokens, renderer) {
+      renderer = renderer || this.renderer;
+      var out = '',
+          i,
+          token;
+      var l = tokens.length;
