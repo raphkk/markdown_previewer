@@ -2087,3 +2087,10 @@
               out += renderer.text(token.text);
               break;
             }
+
+
+          case 'html':
+            {
+              out += renderer.html(token.text);
+              break;
+            }
