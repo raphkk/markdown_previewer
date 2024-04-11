@@ -2094,3 +2094,9 @@
               out += renderer.html(token.text);
               break;
             }
+
+            case 'link':
+              {
+                out += renderer.link(token.href, token.title, this.parseInline(token.tokens, renderer));
+                break;
+              }
