@@ -2105,4 +2105,8 @@
                   out += renderer.image(token.href, token.title, token.text);
                   break;
                 }
-    
+                case 'strong':
+                  {
+                    out += renderer.strong(this.parseInline(token.tokens, renderer));
+                    break;
+                  }
