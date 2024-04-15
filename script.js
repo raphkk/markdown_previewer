@@ -2110,3 +2110,8 @@
                     out += renderer.strong(this.parseInline(token.tokens, renderer));
                     break;
                   }
+                  case 'em':
+                    {
+                      out += renderer.em(this.parseInline(token.tokens, renderer));
+                      break;
+                    }
