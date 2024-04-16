@@ -2115,3 +2115,8 @@
                       out += renderer.em(this.parseInline(token.tokens, renderer));
                       break;
                     }
+                    case 'codespan':
+                      {
+                        out += renderer.codespan(token.text);
+                        break;
+                      }
