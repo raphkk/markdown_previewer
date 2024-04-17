@@ -2120,3 +2120,9 @@
                         out += renderer.codespan(token.text);
                         break;
                       }
+
+                      case 'br':
+                        {
+                          out += renderer.br();
+                          break;
+                        }
