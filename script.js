@@ -2126,3 +2126,8 @@
                           out += renderer.br();
                           break;
                         }
+                        case 'del':
+                          {
+                            out += renderer.del(this.parseInline(token.tokens, renderer));
+                            break;
+                          }
