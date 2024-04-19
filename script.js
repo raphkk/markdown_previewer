@@ -2131,3 +2131,8 @@
                             out += renderer.del(this.parseInline(token.tokens, renderer));
                             break;
                           }
+                          case 'text':
+                            {
+                              out += renderer.text(token.text);
+                              break;
+                            }
