@@ -2136,3 +2136,20 @@
                               out += renderer.text(token.text);
                               break;
                             }
+                            var errMsg = 'Token with "' + token.type + '" type was not found.';
+
+                            if (this.options.silent) {
+                              console.error(errMsg);
+                              return;
+                            } else {
+                              throw new Error(errMsg);
+                            }
+                          }
+                      }
+                    }
+              
+                    return out;
+                  };
+              
+                  return Parser;
+                }();
