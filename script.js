@@ -2153,3 +2153,12 @@
               
                   return Parser;
                 }();
+                var merge$2 = helpers.merge,
+                checkSanitizeDeprecation$1 = helpers.checkSanitizeDeprecation,
+                escape$2 = helpers.escape;
+            var getDefaults = defaults.getDefaults,
+                changeDefaults = defaults.changeDefaults,
+                defaults$5 = defaults.defaults;
+            /**
+             * Marked
+             */
