@@ -2162,3 +2162,8 @@
             /**
              * Marked
              */
+            function marked(src, opt, callback) {
+              // throw error in case of non string input
+              if (typeof src === 'undefined' || src === null) {
+                throw new Error('marked(): input parameter is undefined or null');
+              }
