@@ -2167,3 +2167,6 @@
               if (typeof src === 'undefined' || src === null) {
                 throw new Error('marked(): input parameter is undefined or null');
               }
+              if (typeof src !== 'string') {
+                throw new Error('marked(): input parameter is of type ' + Object.prototype.toString.call(src) + ', string expected');
+              }
