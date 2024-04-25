@@ -2170,3 +2170,9 @@
               if (typeof src !== 'string') {
                 throw new Error('marked(): input parameter is of type ' + Object.prototype.toString.call(src) + ', string expected');
               }
+
+
+    if (typeof opt === 'function') {
+      callback = opt;
+      opt = null;
+    }
