@@ -2204,3 +2204,7 @@
         opt.highlight = highlight;
         return err ? callback(err) : callback(null, out);
       };
+
+      if (!highlight || highlight.length < 3) {
+        return done();
+      }
