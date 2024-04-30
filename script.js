@@ -2208,3 +2208,14 @@
       if (!highlight || highlight.length < 3) {
         return done();
       }
+
+      delete opt.highlight;
+      if (!tokens.length) return done();
+      var pending = 0;
+      marked.walkTokens(tokens, function (token) {
+        if (token.type === 'code') {
+          pending++;
+          highlight(token.text, token.lang, function (err, code) {
+            if (err) {
+              return done(err);
+            }
