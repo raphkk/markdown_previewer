@@ -2219,3 +2219,8 @@
             if (err) {
               return done(err);
             }
+
+            if (code != null && code !== token.text) {
+              token.text = code;
+              token.escaped = true;
+            }
