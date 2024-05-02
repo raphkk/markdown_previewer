@@ -2224,3 +2224,19 @@
               token.text = code;
               token.escaped = true;
             }
+
+            pending--;
+
+            if (pending === 0) {
+              done();
+            }
+          });
+        }
+      });
+
+      if (pending === 0) {
+        done();
+      }
+
+      return;
+    }
