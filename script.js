@@ -2263,3 +2263,9 @@
   /**
    * Options
    */
+
+  marked.options = marked.setOptions = function (opt) {
+    merge$2(marked.defaults, opt);
+    changeDefaults(marked.defaults);
+    return marked;
+  };
