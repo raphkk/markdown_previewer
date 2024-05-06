@@ -2269,3 +2269,9 @@
     changeDefaults(marked.defaults);
     return marked;
   };
+
+  marked.getDefaults = getDefaults;
+  marked.defaults = defaults$5;
+  /**
+   * Use Extension
+   */
