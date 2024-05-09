@@ -2330,3 +2330,10 @@
             return ret;
           };
         };
+        for (var prop in extension.tokenizer) {
+          _loop2(prop);
+        }
+
+        opts.tokenizer = tokenizer;
+      })();
+    }
