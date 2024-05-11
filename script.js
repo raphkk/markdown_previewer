@@ -2349,3 +2349,9 @@
         }
       };
     }
+
+    marked.setOptions(opts);
+  };
+  /**
+   * Run callback for every token
+   */
