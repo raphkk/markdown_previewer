@@ -2368,3 +2368,12 @@
               var cell = _step2.value;
               marked.walkTokens(cell, callback);
             }
+
+            for (var _iterator3 = _createForOfIteratorHelperLoose(token.tokens.cells), _step3; !(_step3 = _iterator3()).done;) {
+              var row = _step3.value;
+
+              for (var _iterator4 = _createForOfIteratorHelperLoose(row), _step4; !(_step4 = _iterator4()).done;) {
+                var _cell = _step4.value;
+                marked.walkTokens(_cell, callback);
+              }
+            }
